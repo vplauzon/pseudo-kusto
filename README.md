@@ -1,0 +1,2 @@
+# pseudo-kusto
+Learning project 
