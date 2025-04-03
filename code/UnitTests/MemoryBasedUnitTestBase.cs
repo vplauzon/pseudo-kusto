@@ -1,4 +1,5 @@
 ﻿using DataContract;
+using QueryGateway;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,13 @@ namespace UnitTests
 {
     public abstract class MemoryBasedUnitTestBase
     {
-        protected IKqlClient KqlClient => (IKqlClient)null;
+        private readonly QueryGatewayService _queryGatewayService;
+
+        protected MemoryBasedUnitTestBase()
+        {
+            _queryGatewayService = new QueryGatewayService();
+        }
+
+        protected IKqlClient KqlClient => _queryGatewayService.KqlClient;
     }
 }
