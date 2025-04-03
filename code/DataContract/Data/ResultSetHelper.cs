@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DataContract.Data
 {
-    internal static class ResultSetHelper
+    public static class ResultSetHelper
     {
         public static async Task<DataSet> ToDataSetAsync(this ResultSet resultSet)
         {
