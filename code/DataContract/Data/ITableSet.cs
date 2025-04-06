@@ -8,6 +8,6 @@ namespace DataContract.Data
 
         IImmutableList<ColumnSchema> Schema { get; }
 
-        IAsyncEnumerable<RowSet> GetRowSetsAsync();
+        IAsyncEnumerable<IRowSet> GetRowSetsAsync();
     }
 }
