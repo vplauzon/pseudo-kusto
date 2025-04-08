@@ -24,7 +24,8 @@ rule(interleave=false) quotedString = doubleQuotedString | singleQuotedString;
 rule scalarValue = boolean:boolean | integer:integer | float:float | string:quotedString;
 
 #	Column expression
-rule columnExpression = id:(id:identifier "=" => id)? scalar:scalarValue => { "Identifier" : firstOrNull(id), "Scalar" : scalar};
+rule columnExpression = id:(id:identifier "=" => id)? scalar:scalarValue =>
+	{ "columnName" : firstOrNull(id), "scalar" : scalar};
 rule columnExpressionList = head:columnExpression
 	tail:("," ce:columnExpression => ce)* => prepend(head, tail);
 

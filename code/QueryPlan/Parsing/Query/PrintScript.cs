@@ -2,5 +2,7 @@
 
 namespace QueryPlan.Parsing.Query
 {
-    public record PrintScript(ColumnScript[] Columns);
+    public record PrintScript(ColumnScript[] Columns)
+    {
+    }
 }
