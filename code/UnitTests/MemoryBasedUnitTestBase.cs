@@ -10,13 +10,13 @@ namespace UnitTests
 {
     public abstract class MemoryBasedUnitTestBase
     {
-        private readonly ScriptGatewayService _scriptGatewayService;
+        private readonly CentralGatewayKqlClient _centralGatewayKqlClient;
 
         protected MemoryBasedUnitTestBase()
         {
-            _scriptGatewayService = new ScriptGatewayService();
+            _centralGatewayKqlClient = new CentralGatewayKqlClient();
         }
 
-        protected IKqlClient KqlClient => _scriptGatewayService.KqlClient;
+        protected IKqlClient KqlClient => _centralGatewayKqlClient;
     }
 }

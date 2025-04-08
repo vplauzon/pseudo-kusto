@@ -8,7 +8,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "UnitTests\Unit
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QueryPlan", "QueryPlan\QueryPlan.csproj", "{0AE3278E-9793-409C-81B9-F848074BC743}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScriptGateway", "ScriptGateway\ScriptGateway.csproj", "{84E84F86-3419-2BF2-64AA-945E2982C3DA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CentralGateway", "CentralGateway\CentralGateway.csproj", "{B411FD75-5B41-1C44-C0B3-D30A5118E09F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -28,10 +28,10 @@ Global
 		{0AE3278E-9793-409C-81B9-F848074BC743}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0AE3278E-9793-409C-81B9-F848074BC743}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0AE3278E-9793-409C-81B9-F848074BC743}.Release|Any CPU.Build.0 = Release|Any CPU
-		{84E84F86-3419-2BF2-64AA-945E2982C3DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{84E84F86-3419-2BF2-64AA-945E2982C3DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{84E84F86-3419-2BF2-64AA-945E2982C3DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{84E84F86-3419-2BF2-64AA-945E2982C3DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B411FD75-5B41-1C44-C0B3-D30A5118E09F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B411FD75-5B41-1C44-C0B3-D30A5118E09F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B411FD75-5B41-1C44-C0B3-D30A5118E09F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B411FD75-5B41-1C44-C0B3-D30A5118E09F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

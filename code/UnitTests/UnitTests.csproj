@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ScriptGateway\ScriptGateway.csproj" />
+    <ProjectReference Include="..\CentralGateway\CentralGateway.csproj" />
   </ItemGroup>
 
   <ItemGroup>
