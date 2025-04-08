@@ -1,4 +1,6 @@
-﻿namespace QueryPlan.Parsing.Query
+﻿using System.Collections.Immutable;
+
+namespace QueryPlan.Parsing.Query
 {
-    public record PrintScript(int? Integer);
+    public record PrintScript(ColumnScript[] Columns);
 }

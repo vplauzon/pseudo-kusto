@@ -23,5 +23,13 @@ rule(interleave=false) quotedString = doubleQuotedString | singleQuotedString;
 #	Scalars
 rule scalarValue = boolean:boolean | integer:integer | float:float | string:quotedString;
 
+#	Column expression
+rule columnExpression = id:(id:identifier "=" => id)? scalar:scalarValue => { "Identifier" : firstOrNull(id), "Scalar" : scalar};
+rule columnExpressionList = head:columnExpression
+	tail:("," ce:columnExpression => ce)* => prepend(head, tail);
+
+#	Operators
+rule printOperator = "print" c:columnExpressionList => { "columns" : c };
+
 #	main rule
-rule main = "print" s:scalarValue => { "query" : { "print" : s } };
+rule main = print:printOperator | a:"" => { "query" : defaultOutput };
