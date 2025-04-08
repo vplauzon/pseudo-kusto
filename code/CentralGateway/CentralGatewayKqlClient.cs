@@ -1,5 +1,6 @@
 ﻿using DataContract;
 using DataContract.Data;
+using QueryPlan.LogicalPlan;
 using QueryPlan.Parsing;
 
 namespace ScriptGateway
@@ -9,6 +10,7 @@ namespace ScriptGateway
         Task<ResultSet> IKqlClient.ExecuteScriptAsync(string kqlScript)
         {
             var script = ScriptParser.ParseScript(kqlScript);
+            var logicalPlan = LogicalPlanner.FromScript(script);
 
             throw new NotImplementedException();
         }
