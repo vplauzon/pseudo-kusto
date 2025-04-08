@@ -1,6 +1,6 @@
-﻿namespace QueryPlan.Parsing
+﻿using QueryPlan.Parsing.Query;
+
+namespace QueryPlan.Parsing
 {
-    public class Script
-    {
-    }
+    public record Script(QueryScript? Query);
 }
