@@ -2,10 +2,10 @@
 
 namespace UnitTests
 {
-    public class UnitTest1 : MemoryBasedUnitTestBase
+    public class PrintTest : MemoryBasedUnitTestBase
     {
         [Fact]
-        public async Task Test1()
+        public async Task Long()
         {
             var result = await KqlClient.ExecuteScriptAsync("print 42");
             var table = await result.ToDataTableAsync();
