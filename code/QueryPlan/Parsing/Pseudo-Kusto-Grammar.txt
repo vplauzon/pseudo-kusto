@@ -20,12 +20,12 @@ rule(interleave=false) singleQuotedString = "'" quotedString:singleQuotableStrin
 rule(interleave=false) doubleQuotedString = '"' quotedString:doubleQuotableString '"' => quotedString;
 rule(interleave=false) quotedString = doubleQuotedString | singleQuotedString;
 
-#	Scalars
-rule scalarValue = boolean:boolean | integer:integer | float:float | string:quotedString;
+#	Litterals
+rule literalValue = boolean:boolean | integer:integer | float:float | string:quotedString;
 
 #	Column expression
-rule columnExpression = id:(id:identifier "=" => id)? scalar:scalarValue =>
-	{ "columnName" : firstOrNull(id), "scalar" : scalar};
+rule columnExpression = id:(id:identifier "=" => id)? literal:literalValue =>
+	{ "columnName" : firstOrNull(id), "literal" : literal};
 rule columnExpressionList = head:columnExpression
 	tail:("," ce:columnExpression => ce)* => prepend(head, tail);
 

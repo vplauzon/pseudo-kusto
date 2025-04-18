@@ -1,4 +1,4 @@
 ﻿namespace QueryPlan.Parsing.Query
 {
-    public record ColumnScript(string? ColumnName, ScalarScript Scalar);
+    public record ColumnScript(string? ColumnName, LiteralScript Literal);
 }

@@ -48,10 +48,10 @@ namespace QueryPlan.LogicalPlan
         {
             return new LogicalQueryColumn(
                 columnScript.ColumnName,
-                ToLogicalScalar(columnScript.Scalar));
+                ToLogicalScalar(columnScript.Literal));
         }
 
-        private static LogicalScalar ToLogicalScalar(ScalarScript scalar)
+        private static LogicalScalar ToLogicalScalar(LiteralScript scalar)
         {
             if (scalar.Integer != null)
             {
