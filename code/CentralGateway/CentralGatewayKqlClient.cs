@@ -1,8 +1,7 @@
 ﻿using DataContract;
 using DataContract.Data;
-using QueryPlan.LogicalPlan;
+using QueryPlan;
 using QueryPlan.Parsing;
-using QueryPlan.PhysicalPlan;
 
 namespace ScriptGateway
 {
