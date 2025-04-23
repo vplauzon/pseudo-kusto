@@ -10,8 +10,8 @@ namespace ScriptGateway
         Task<ResultSet> IKqlClient.ExecuteScriptAsync(string kqlScript)
         {
             var script = ScriptParser.ParseScript(kqlScript);
-            var logicalPlan = LogicalPlanner.ToLogicalPlan(script);
-            var physicalPlan = PhysicalPlanner.ToPhysicalPlan(logicalPlan);
+            var logicalPlan = script.ToLogicalPlan();
+            var physicalPlan = logicalPlan.ToPhysicalPlan();
 
             throw new NotImplementedException();
         }
